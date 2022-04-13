@@ -1,0 +1,27 @@
+#version 450
+
+layout( local_size_x = 32, local_size_y = 32 ) in;
+
+layout( set = 0, binding = 0, rgba32f ) uniform imageBuffer StorageTexelBuffer;
+
+layout(push_constant) uniform TimeState{
+ float DeltaTime;
+} PushConstant;
+
+const uint PARTICLES_COUNT = 4*1024;    
+
+void main() {
+    vec4 position = imageLoad( StorageTexelBuffer, int(gl_GlobalInvocationID.x * 2) );
+    vec4 positionReset = imageLoad( StorageTexelBuffer, int(gl_GlobalInvocationID.x * 2 + 1) );
+
+    vec3 speed = normalize( cross( vec3( sin(position.x), sin(position.y), cos(position.z)), position.xyz ) );
+    
+    if((position.x <= 10.0f || position.y <= 10.0f || position.z <= 10.0f) && (position.x >= -10.0f || position.y >= -10.0f || position.z >= -10.0f) ){
+        position.xyz += speed * PushConstant.DeltaTime * 0.001;    
+    }
+    else{
+        //position.xyz = positionReset.xyz;
+        position.xyz += speed * PushConstant.DeltaTime * 0.001;
+    }
+    imageStore( StorageTexelBuffer, int(gl_GlobalInvocationID.x * 2), position );
+}
