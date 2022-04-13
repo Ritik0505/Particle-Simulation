@@ -1,4 +1,4 @@
-![first image](Captures/Frame#45.jpg)
+![first image](Captures/Frame#45)
 
 ![second image](Captures/Frame#117.jpg)
 
