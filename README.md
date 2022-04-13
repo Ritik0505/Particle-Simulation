@@ -1,13 +1,13 @@
-![first image](Captures/Frame#45)
+![first image](Captures/Frame45)
 
-![second image](Captures/Frame#117.jpg)
+![second image](Captures/Frame117.jpg)
 
-![third image](Captures/Frame#1186.jpg)
+![third image](Captures/Frame1186.jpg)
 
-![fourth image](Captures/Frame#2315.jpg)
+![fourth image](Captures/Frame2315.jpg)
 
-![fifth image](Captures/Frame#2836.jpg)
+![fifth image](Captures/Frame2836.jpg)
 
-![sixth image](Captures/Frame#3028.jpg)
+![sixth image](Captures/Frame3028.jpg)
 
-![seventh image](Captures/Frame#3736.jpg)
+![seventh image](Captures/Frame3736.jpg)
